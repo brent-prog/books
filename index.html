@@ -60,7 +60,7 @@ function draw(){
  document.getElementById('empty').hidden=visible.length>0;
  if(window.lucide)lucide.createIcons();
 }
-function resetResultsScroll(){const controls=document.querySelector('.controls');window.scrollTo({top:controls.getBoundingClientRect().top+window.scrollY,behavior:'instant'})}
+function resetResultsScroll(){const controls=document.querySelector('.controls');window.scrollTo({top:controls.offsetTop,behavior:'instant'})}
 function selectCategory(value){category=value;catNav.querySelectorAll('button').forEach(b=>{const active=b.dataset.category===value;b.classList.toggle('selected',active);b.setAttribute('aria-pressed',String(active))});draw();resetResultsScroll()}
 function selectTag(value){tag=value;showRelated=false;tagSelect.value=value;draw();resetResultsScroll()}
 catNav.addEventListener('click',e=>{const b=e.target.closest('button[data-category]');if(b)selectCategory(b.dataset.category)});
