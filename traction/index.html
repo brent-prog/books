@@ -424,11 +424,109 @@ h2{font-size:clamp(33px,8vw,45px)}
 @media(max-width:700px){
  #vision .four .marketing-principle.popout-trigger{padding:13px 9px}
 }
+</style><style>
+/* Unified interactive tile affordance: visually separate cards, no misleading arrows.
+   Only actionable elements receive this treatment. */
+:root{--tile-stroke:#d9c4b0;--tile-hover:#d9631c;--tile-shadow:0 2px 0 rgba(93,60,35,.10),0 5px 13px rgba(30,38,43,.055)}
+#overview .frustration-scene,
+#overview .beliefs,
+#overview .system,
+#overview #essentials,
+#vision .vto,
+#vision .four,
+#start .roadmap{
+  gap:9px;
+  border:0;
+  background:transparent;
+  align-items:stretch;
+}
+#overview .frustration-scene .frustration-vignette.popout-trigger,
+#overview .beliefs .belief-panel.popout-trigger,
+#overview .system .component-tile.popout-trigger,
+#overview #essentials .essential-trigger,
+#vision .vto button,
+#vision .four .marketing-principle.popout-trigger,
+#start .roadmap>a{
+  box-sizing:border-box;
+  border:1px solid var(--tile-stroke);
+  border-radius:9px;
+  box-shadow:var(--tile-shadow);
+  background:#fffdf9;
+  cursor:pointer;
+  position:relative;
+  overflow:hidden;
+  transition:background-color .16s ease,border-color .16s ease,box-shadow .16s ease,transform .16s ease;
+}
+#overview .frustration-scene .frustration-vignette.popout-trigger:hover,
+#overview .beliefs .belief-panel.popout-trigger:hover,
+#overview .system .component-tile.popout-trigger:hover,
+#overview #essentials .essential-trigger:hover,
+#vision .vto button:hover,
+#vision .four .marketing-principle.popout-trigger:hover,
+#start .roadmap>a:hover{
+  background:#fff2e5;
+  border-color:var(--tile-hover);
+  box-shadow:0 5px 18px rgba(145,81,40,.16);
+  transform:translateY(-2px);
+}
+#overview .frustration-scene .frustration-vignette.popout-trigger:focus-visible,
+#overview .beliefs .belief-panel.popout-trigger:focus-visible,
+#overview .system .component-tile.popout-trigger:focus-visible,
+#overview #essentials .essential-trigger:focus-visible,
+#vision .vto button:focus-visible,
+#vision .four .marketing-principle.popout-trigger:focus-visible,
+#start .roadmap>a:focus-visible{
+  outline:3px solid #d9631c;
+  outline-offset:2px;
+}
+#overview .frustration-scene .frustration-vignette.popout-trigger:active,
+#overview .beliefs .belief-panel.popout-trigger:active,
+#overview .system .component-tile.popout-trigger:active,
+#overview #essentials .essential-trigger:active,
+#vision .vto button:active,
+#vision .four .marketing-principle.popout-trigger:active,
+#start .roadmap>a:active{transform:translateY(0);box-shadow:0 1px 3px rgba(30,38,43,.1)}
+/* Keep the alternating subtle warmth, but retain the individual tile boundaries. */
+#overview .beliefs .belief-panel.popout-trigger:nth-child(even),
+#overview .system .component-tile.popout-trigger:nth-child(even),
+#vision .vto button:nth-child(4n+2),
+#vision .vto button:nth-child(4n+3),
+#vision .four .marketing-principle.popout-trigger:nth-child(even),
+#start .roadmap>a:nth-child(even){background:#fff8f1}
+#overview .beliefs .belief-panel.popout-trigger:nth-child(even):hover,
+#overview .system .component-tile.popout-trigger:nth-child(even):hover,
+#vision .vto button:nth-child(4n+2):hover,
+#vision .vto button:nth-child(4n+3):hover,
+#vision .four .marketing-principle.popout-trigger:nth-child(even):hover,
+#start .roadmap>a:nth-child(even):hover{background:#fff2e5}
+#overview .frustration-scene .frustration-vignette.popout-trigger:last-child,
+#overview .frustration-scene .frustration-vignette.popout-trigger:nth-child(even){border:1px solid var(--tile-stroke)}
+#overview .frustration-scene .frustration-vignette.popout-trigger:last-child:hover,
+#overview .frustration-scene .frustration-vignette.popout-trigger:nth-child(even):hover{border-color:var(--tile-hover)}
+/* Explicit interaction hint above each collection, without visual noise inside cards. */
+.tile-hint{font:600 11px/1.4 'DM Sans',sans-serif;letter-spacing:.015em;color:#946342;margin:0 0 9px}
+@media(max-width:700px){
+ #overview .frustration-scene,#overview .beliefs,#overview .system,
+ #overview #essentials,#vision .vto,#vision .four,#start .roadmap{gap:8px}
+ #overview .frustration-scene .frustration-vignette.popout-trigger,
+ #overview .beliefs .belief-panel.popout-trigger,
+ #overview .system .component-tile.popout-trigger,
+ #overview #essentials .essential-trigger,
+ #vision .vto button,
+ #vision .four .marketing-principle.popout-trigger,
+ #start .roadmap>a{border-radius:8px;box-shadow:0 2px 0 rgba(93,60,35,.11),0 3px 9px rgba(30,38,43,.05)}
+}
+@media(prefers-reduced-motion:reduce){
+ #overview .popout-trigger,#overview #essentials .essential-trigger,
+ #vision .vto button,#start .roadmap>a{transition:none}
+ #overview .popout-trigger:hover,#overview #essentials .essential-trigger:hover,
+ #vision .vto button:hover,#start .roadmap>a:hover{transform:none}
+}
 </style></head><body>
 <header class="hero"><div class="hero-inner"><a class="back" href="/">← ALL BOOK SUMMARIES</a><div class="hero-grid"><div class="hero-copy"><div class="eyebrow">GINO WICKMAN <span class="hero-dot">·</span> THE ENTREPRENEURIAL OPERATING SYSTEM</div><h1>TRACTION<span class="hero-period">.</span></h1><p class="hero-lead">GET A GRIP ON YOUR BUSINESS.</p><p class="hero-description">Turn a clear vision into consistent execution—with the six key components of EOS.</p><div class="hero-actions"><a class="hero-primary" href="#overview">EXPLORE THE FRAMEWORK <span aria-hidden="true">↘</span></a><a class="hero-secondary" href="#checkup">ORGANIZATIONAL CHECKUP <span aria-hidden="true">↗</span></a></div></div><div class="hero-visual"><svg viewBox="0 0 360 290" role="img" aria-label="Six interconnected components driving traction"><defs><linearGradient id="tractionGradient" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#f5a468"/><stop offset="1" stop-color="#d9631c"/></linearGradient></defs><circle cx="180" cy="145" r="122" fill="#fff7ee" stroke="#e8c9ac" stroke-width="2" stroke-dasharray="4 8"/><g stroke="#d9631c" stroke-width="5" fill="none"><path d="M180 145 180 42M180 145 269 93M180 145 269 197M180 145 180 248M180 145 91 197M180 145 91 93"/></g><g><circle cx="180" cy="42" r="35" fill="#e4dafb" stroke="#68499d" stroke-width="3"/><circle cx="269" cy="93" r="35" fill="#b9e6d9" stroke="#50a99f" stroke-width="3"/><circle cx="269" cy="197" r="35" fill="#ffe2c7" stroke="#d9631c" stroke-width="3"/><circle cx="180" cy="248" r="35" fill="#e4dafb" stroke="#68499d" stroke-width="3"/><circle cx="91" cy="197" r="35" fill="#b9e6d9" stroke="#50a99f" stroke-width="3"/><circle cx="91" cy="93" r="35" fill="#ffe2c7" stroke="#d9631c" stroke-width="3"/></g><g fill="#172934" font-family="Oswald,Arial,sans-serif" font-size="13" font-weight="700" text-anchor="middle"><text x="180" y="46">VISION</text><text x="269" y="97">PEOPLE</text><text x="269" y="201">DATA</text><text x="180" y="252">ISSUES</text><text x="91" y="201">PROCESS</text><text x="91" y="97">TRACTION</text></g><circle cx="180" cy="145" r="43" fill="#172934" stroke="#fff" stroke-width="6"/><path d="M160 146l14 14 29-32" stroke="#f6a36b" stroke-width="7" stroke-linecap="round" stroke-linejoin="round" fill="none"/><path d="m202 128 0 13-13-13" fill="none" stroke="#f6a36b" stroke-width="5" stroke-linecap="round" stroke-linejoin="round"/></svg><div class="hero-visual-caption">SIX COMPONENTS. ONE OPERATING SYSTEM.</div></div></div></div></header>
 <nav class="nav" aria-label="Sections"><div class="container nav-inner"><a href="#overview">Overview</a><a href="#vision">Vision</a><a href="#people">People</a><a href="#data">Data</a><a href="#issues">Issues</a><a href="#process">Process</a><a href="#traction">Traction</a><a href="#checkup">Checkup</a><a href="#start">Getting started</a></div></nav>
 <main class="container">
-<section class="chapter" id="overview"><div class="kicker">01 · The foundation</div><h2>Get a grip on your business.</h2><p class="lede">Five frustrations indicate a business has outgrown the way it operates. Address them by strengthening six connected components.</p><div class="plate"><h3 class="plate-title">Five frustrations</h3><div class="frustration-scene" id="frustrations"></div><h3 class="subhead">Twenty essentials</h3><div class="icon-grid" id="essentials"></div></div><div class="plate"><h3 class="plate-title">Four beliefs required for change</h3><div class="beliefs" id="beliefs"></div></div><div class="plate"><h3 class="plate-title">Six key components</h3><div class="system" id="system"></div><p class="small">Vision defines direction. People execute. Data exposes reality. Issues are solved. Processes create consistency. Traction turns priorities into results.</p></div></section>
+<section class="chapter" id="overview"><div class="kicker">01 · The foundation</div><h2>Get a grip on your business.</h2><p class="lede">Five frustrations indicate a business has outgrown the way it operates. Address them by strengthening six connected components.</p><div class="plate"><h3 class="plate-title">Five frustrations</h3><p class="tile-hint">Select a tile for a practical explanation.</p><div class="frustration-scene" id="frustrations"></div><h3 class="subhead">Twenty essentials</h3><p class="tile-hint">Select any essential to explore how to apply it.</p><div class="icon-grid" id="essentials"></div></div><div class="plate"><h3 class="plate-title">Four beliefs required for change</h3><p class="tile-hint">Select a belief to explore it.</p><div class="beliefs" id="beliefs"></div></div><div class="plate"><h3 class="plate-title">Six key components</h3><p class="tile-hint">Select a component to explore it.</p><div class="system" id="system"></div><p class="small">Vision defines direction. People execute. Data exposes reality. Issues are solved. Processes create consistency. Traction turns priorities into results.</p></div></section>
 <section class="chapter" id="vision"><div class="kicker">02 · Vision</div><h2>Eight decisions. One shared direction.</h2><p class="lede">The Vision/Traction Organizer (V/TO) translates a shared destination into specific decisions and priorities.</p><div class="plate"><h3 class="plate-title">Vision / Traction Organizer</h3><div class="vto" id="vto"></div><div class="vto-detail" id="vto-detail" aria-live="polite"></div></div><div class="plate"><h3 class="plate-title">The four-part marketing strategy</h3><div class="four" id="marketing"></div></div></section>
 <section class="chapter" id="people"><div class="kicker">03 · People</div><h2>Right people. Right seats.</h2><p class="lede">Two different tests: fit with core values, and fit for the responsibilities of the seat.</p><div class="plate"><h3 class="plate-title">The People Analyzer</h3><div class="concept-art" aria-label="Right people and right seats overlap"><svg viewBox="0 0 440 110" role="img" aria-label="Right people plus right seats equals the right fit" style="display:block;width:100%;max-width:490px;margin:0 auto 14px"><circle cx="155" cy="55" r="49" fill="#e4dafb" stroke="#68499d" stroke-width="2"/><circle cx="285" cy="55" r="49" fill="#b9e6d9" stroke="#50a99f" stroke-width="2"/><path d="M195 25 Q220 55 195 85 Q170 55 195 25" fill="#f08066" opacity=".5"/><text x="155" y="52" font-size="15" font-weight="800" text-anchor="middle" fill="#172934">RIGHT</text><text x="155" y="68" font-size="15" font-weight="800" text-anchor="middle" fill="#172934">PERSON</text><text x="285" y="52" font-size="15" font-weight="800" text-anchor="middle" fill="#172934">RIGHT</text><text x="285" y="68" font-size="15" font-weight="800" text-anchor="middle" fill="#172934">SEAT</text><path d="M210 55h20" stroke="#d9631c" stroke-width="3"/><path d="m225 49 7 6-7 6" fill="none" stroke="#d9631c" stroke-width="3"/></svg></div><div class="matrix" id="people-matrix"></div><div class="note"><strong>Right person:</strong> shares your core values. <strong>Right seat:</strong> Gets it, Wants it and has the Capacity to do it (GWC).</div></div><div class="plate"><h3 class="plate-title">The Accountability Chart</h3><div class="org"><div class="org-head">Visionary ↔ Integrator</div><div class="arrowline"></div><div class="three"><div class="diagram-box"><strong>Function 1</strong><p>One accountable owner</p></div><div class="diagram-box"><strong>Function 2</strong><p>One accountable owner</p></div><div class="diagram-box"><strong>Functions 3–7</strong><p>Up to seven major functions</p></div></div></div><p class="small">Build the structure before assigning names. A person may fill multiple seats, but each major function has one accountable owner.</p></div><div class="plate"><div class="three"><div><h4>Visionary</h4><p>Ideas, major problems, relationships, culture and creative direction.</p></div><div><h4>Integrator</h4><p>Runs the business, integrates functions and resolves daily friction.</p></div><div><h4>LMA</h4><p>Leaders Lead, Manage and hold people Accountable.</p></div></div><h3 class="subhead">Three-strike improvement sequence</h3><div class="path"><div><b>First strike</b><p>Discuss expectations; allow 30 days to improve.</p></div><div><b>Second strike</b><p>Reinforce expectations; allow another 30 days.</p></div><div><b>Third strike</b><p>If there is still no improvement, part ways.</p></div></div></div></section>
 <section class="chapter" id="data"><div class="kicker">04 · Data</div><h2>Know what the numbers say.</h2><p class="lede">Track 5–15 weekly leading measures, each with a single accountable owner. Act on off-track activity before it appears in financial results.</p><div class="plate"><h3 class="plate-title">Leading indicators → red flags → action</h3><div class="path"><div><b>Measure</b><p>Track the activity that drives the one-year plan.</p></div><div><b>Identify</b><p>Compare actual performance with the weekly target.</p></div><div><b>Solve</b><p>Move off-track results to the issues list.</p></div></div></div><div class="plate"><h3 class="plate-title">Weekly Scorecard</h3><p class="small">Example scorecard. Enter your own measures and targets; this tool operates in your browser and does not save entries.</p><div class="form-row"><input id="metric" placeholder="Weekly measure" aria-label="Weekly measure"><input id="owner" placeholder="Owner" aria-label="Owner"><input id="target" type="number" placeholder="Target" aria-label="Target"><button id="addmetric" class="primary">Add measure</button></div><div class="table-scroll"><table><thead><tr><th>Measure</th><th>Owner</th><th>Target</th><th>Actual</th><th>Status</th><th></th></tr></thead><tbody id="scorebody"></tbody></table></div></div><div class="plate"><h3 class="plate-title">Why everyone needs a number</h3><div class="commandments" id="number-benefits"></div></div></section>
