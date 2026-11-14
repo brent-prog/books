@@ -31,7 +31,7 @@ function icon(name){return '<i data-lucide="'+safe(name)+'" aria-hidden="true"><
 function draw(){
 const q=search.value.trim().toLowerCase();let shown=0;grid.innerHTML='';
 data.forEach((d,i)=>{if(filter==='first'&&i>=24||filter==='second'&&i<24)return;if(q&&!([String(i+1),...d].join(' ').toLowerCase().includes(q)))return;shown++;
-let b=document.createElement('button');b.className='law';b.style.setProperty('--accent',d[4]);b.setAttribute('aria-label','Open law '+(i+1)+': '+d[0]);b.innerHTML='<div class="law-head"><span class="num">'+String(i+1).padStart(2,'0')+'</span><h2>'+safe(d[0])+'</h2></div><div class="art">'+icon(d[3])+'<span class="ornament">Visual interpretation</span></div><p class="summary">'+safe(d[1])+'</p><p class="more">Explore this law ↗</p>';b.addEventListener('click',()=>openLaw(i));grid.appendChild(b)});
+let b=document.createElement('button');b.className='law';b.style.setProperty('--accent',d[4]);b.setAttribute('aria-label','Open law '+(i+1)+': '+d[0]);b.innerHTML='<div class="law-head"><span class="num">'+String(i+1).padStart(2,'0')+'</span><h2>'+safe(d[0])+'</h2></div><div class="art">'+icon(d[3])+'</div><p class="summary">'+safe(d[1])+'</p><p class="more">Explore this law ↗</p>';b.addEventListener('click',()=>openLaw(i));grid.appendChild(b)});
 document.getElementById('count').textContent=shown+' LAWS';document.getElementById('empty').hidden=shown>0;
 if(window.lucide)lucide.createIcons();
 }
