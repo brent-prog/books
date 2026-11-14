@@ -183,6 +183,35 @@ h2{font-size:clamp(33px,8vw,45px)}
 #vision .marketing-principle strong{display:block;font:600 18px/1.2 Oswald,sans-serif;text-transform:uppercase;color:#aa4917}
 #vision .marketing-principle p{font-size:12px;line-height:1.45;margin:8px 0 0}
 @media(max-width:700px){#vision .vto{grid-template-columns:repeat(2,minmax(0,1fr))}#vision .vto button{min-height:130px;padding:12px 8px;gap:5px}#vision .vto-art{width:58px;height:58px}#vision .vto-label{font-size:14px}#vision .vto-detail{grid-template-columns:66px 1fr;gap:12px;padding:14px;min-height:105px}#vision .four{grid-template-columns:repeat(2,minmax(0,1fr))}#vision .marketing-principle{padding:13px 9px}#vision .marketing-art{width:52px;height:52px}#vision .marketing-principle strong{font-size:16px}#vision .marketing-principle p{font-size:11px}}
+</style><style>
+/* Vision mobile usability correction: equal-height compact controls, consistent typography, visible detail */
+#vision .vto{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:0}
+#vision .vto button{box-sizing:border-box;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:5px;min-width:0;min-height:0;height:116px;padding:9px 6px;border:0;border-right:1px solid #e7d9ca;border-bottom:1px solid #e7d9ca;border-radius:0;text-align:center}
+#vision .vto button:nth-child(odd){border-left:0}
+#vision .vto button:nth-child(-n+4){border-bottom:1px solid #e7d9ca}
+#vision .vto-art{width:42px;height:42px;flex:0 0 42px}
+#vision .vto-art svg{width:100%;height:100%}
+#vision .vto-label{display:flex;flex-direction:column;align-items:center;justify-content:center;gap:2px;min-width:0;width:100%;font:600 13px/1.15 Oswald,sans-serif;text-align:center;text-transform:uppercase}
+#vision .vto-label b{display:block;font:700 11px/1 Oswald,sans-serif;letter-spacing:.04em}
+#vision .vto-label span{display:block;overflow-wrap:normal;word-break:normal}
+#vision .vto-detail{display:grid;grid-template-columns:58px minmax(0,1fr);gap:12px;min-height:0;margin-top:10px;padding:13px 15px;align-items:center}
+#vision .vto-detail-art{width:58px}
+#vision .vto-detail h3{font-size:19px;line-height:1.2;margin:0 0 5px}
+#vision .vto-detail p{font-size:13px;line-height:1.45;margin:0}
+@media(max-width:700px){
+#vision .vto{grid-template-columns:repeat(2,minmax(0,1fr))}
+#vision .vto button{height:92px;min-height:0;padding:8px 7px;display:grid;grid-template-columns:38px minmax(0,1fr);gap:8px;align-items:center;justify-items:start;text-align:left}
+#vision .vto-art{width:38px;height:38px;flex:none}
+#vision .vto-label{align-items:flex-start;text-align:left;gap:3px;font-size:13px;line-height:1.15}
+#vision .vto-label b{font-size:12px;line-height:1}
+#vision .vto-label span{font-size:12px;line-height:1.15}
+#vision .vto button:nth-child(odd){border-left:0}
+#vision .vto-detail{grid-template-columns:48px minmax(0,1fr);padding:11px 12px;gap:10px}
+#vision .vto-detail-art{width:48px}
+#vision .vto-detail h3{font-size:17px}
+#vision .vto-detail p{font-size:12px;line-height:1.4}
+}
+@media(max-width:370px){#vision .vto button{grid-template-columns:30px minmax(0,1fr);gap:5px;height:88px}#vision .vto-art{width:30px;height:30px}#vision .vto-label span{font-size:11px}}
 </style></head><body>
 <header class="hero"><div class="hero-inner"><a class="back" href="/">← All book summaries</a><div class="hero-grid"><div><div class="eyebrow">Gino Wickman · Entrepreneurial Operating System</div><h1>TRACTION</h1><p>Get a grip on your business. Six components. Two disciplines. One operating system for turning vision into results.</p></div><div class="hero-mark"><svg viewBox="0 0 300 260" role="img" aria-label="Six connected gears driving business traction"><g fill="none" stroke="#d9631c" stroke-width="9"><circle cx="150" cy="130" r="87"/><circle cx="150" cy="130" r="55"/><circle cx="150" cy="130" r="22"/><path d="M150 17v25M150 218v25M37 130h25M238 130h25M70 50l18 18M212 192l18 18M230 50l-18 18M88 192l-18 18"/></g><path d="M150 55L173 130L150 117L127 130Z" fill="#172934"/><path d="M150 205L173 130L150 143L127 130Z" fill="#d9631c"/></svg></div></div></div></header>
 <nav class="nav" aria-label="Sections"><div class="container nav-inner"><a href="#overview">Overview</a><a href="#vision">Vision</a><a href="#people">People</a><a href="#data">Data</a><a href="#issues">Issues</a><a href="#process">Process</a><a href="#traction">Traction</a><a href="#checkup">Checkup</a><a href="#start">Getting started</a></div></nav>
