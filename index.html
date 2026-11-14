@@ -103,6 +103,8 @@ function openLaw(i){
  document.getElementById('detail-tags').innerHTML=d[7].map(t=>'<button type="button" class="tag-pill" data-tag="'+safe(t)+'">'+safe(t)+'</button>').join('');
  const a=document.getElementById('detail-art');a.style.setProperty('--accent',d[4]);document.getElementById('detail-icon').innerHTML=icon(d[3]);
  overlay.classList.add('open');overlay.setAttribute('aria-hidden','false');document.body.style.overflow='hidden';
+ // Reset the scrollable dialog on every law change so its artwork starts in view.
+ overlay.querySelector('.dialog').scrollTop=0;
  document.getElementById('prev').disabled=i===0;document.getElementById('next').disabled=i===47;
  history.replaceState(null,'','#law-'+String(i+1).padStart(2,'0'));
  if(window.lucide)lucide.createIcons();document.getElementById('close').focus();
