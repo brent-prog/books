@@ -1,0 +1,30 @@
+{
+  "books": [
+    {
+      "slug": "the-48-laws-of-power",
+      "source": "index.html",
+      "title": "The 48 Laws of Power",
+      "author": "Robert Greene",
+      "topics": [
+        "Power",
+        "Psychology",
+        "Leadership"
+      ],
+      "description": "An interactive exploration of the 48 laws, including interpretation and practical applications.",
+      "cover": "https://images.penguinrandomhouse.com/cover/9780140280197"
+    },
+    {
+      "slug": "traction",
+      "source": "traction/index.html",
+      "title": "Traction",
+      "author": "Gino Wickman",
+      "topics": [
+        "Business",
+        "Leadership",
+        "EOS"
+      ],
+      "description": "An illustrated, interactive field guide to the Entrepreneurial Operating System.",
+      "cover": "https://images.penguinrandomhouse.com/cover/9781936661831"
+    }
+  ]
+}
