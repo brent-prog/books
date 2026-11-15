@@ -25,6 +25,19 @@
       ],
       "description": "An illustrated, interactive field guide to the Entrepreneurial Operating System.",
       "cover": "https://images.penguinrandomhouse.com/cover/9781936661831"
+    },
+    {
+      "slug": "zero-to-one",
+      "source": "zero-to-one/index.html",
+      "title": "Zero to One",
+      "author": "Peter Thiel with Blake Masters",
+      "topics": [
+        "Innovation",
+        "Strategy",
+        "Startups"
+      ],
+      "description": "A visual field guide to first-principles thinking, monopoly, power laws, distribution and building a different future.",
+      "cover": "https://images.penguinrandomhouse.com/cover/9780804139298"
     }
   ]
 }
