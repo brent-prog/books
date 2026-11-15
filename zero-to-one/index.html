@@ -333,7 +333,7 @@ function openDetail(key,preserveOpener=false){
   $('modal-glyph').textContent=d.glyph;
   $('modal-kicker').textContent=d.kicker||'ZERO TO ONE';
   $('modal-title').textContent=d.title;
-  modalBody.innerHTML=`<section class="modal-section"><h4>THE PRINCIPLE</h4><p>${d.summary}</p></section><section class="modal-section"><h4>WHY IT MATTERS</h4><p>${d.why}</p></section><section class="modal-section full"><h4>${d.applyLabel||'APPLY THE SOURCE'}</h4><ul>${d.apply.map(x=>`<li>${x}</li>`).join('')}</ul></section>`;
+  modalBody.innerHTML=`<section class="modal-section"><h4>THE PRINCIPLE</h4><p>${d.summary}</p></section><section class="modal-section"><h4>WHY IT MATTERS</h4><p>${d.why}</p></section><section class="modal-section full"><h4>${d.applyLabel||'PRACTICAL APPLICATION'}</h4><ul>${d.apply.map(x=>`<li>${x}</li>`).join('')}</ul></section>`;
   updateQuestionNav(key);
   document.body.classList.add('modal-open');
   if(!modal.open)modal.showModal();
