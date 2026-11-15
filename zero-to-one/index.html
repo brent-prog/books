@@ -79,6 +79,29 @@ main{padding:46px 0 95px}.chapter{scroll-margin-top:78px;margin:0 0 72px}.kicker
   }
   #foundation-grid .tile .icon,#people-grid .tile .icon{width:38px!important;height:38px!important}
 }
+@media(max-width:620px){
+  .governance-grid{
+    grid-template-columns:1fr!important;
+    gap:7px!important;
+  }
+  .governance-grid .mini{
+    min-height:60px;
+    padding:9px 12px;
+    display:grid;
+    grid-template-columns:96px minmax(0,1fr);
+    align-items:center;
+    column-gap:10px;
+  }
+  .governance-grid .mini b{
+    margin:0;
+    font-size:10.5px;
+  }
+  .governance-grid .mini p{
+    margin:0;
+    font-size:10.5px;
+    line-height:1.25;
+  }
+}
 @media(prefers-reduced-motion:reduce){*{scroll-behavior:auto!important}.tile{transition:none}}
 </style>
 </head>
@@ -143,7 +166,7 @@ main{padding:46px 0 95px}.chapter{scroll-margin-top:78px;margin:0 0 72px}.kicker
   <div class="kicker">04 · Foundations</div><h2>A startup messed up at its foundation cannot be fixed.</h2>
   <p class="lede">Thiel’s Law makes the founding conditions unusually important. The people, ownership structure, governance and incentives established early shape whether the company can stay aligned for the long term.</p>
   <div class="core-grid" id="foundation-grid"></div>
-  <div class="plate"><h3 class="plate-title">Ownership. Possession. Control.</h3><div class="support-grid"><div class="mini"><b>Ownership</b><p>Who legally owns the company’s equity?</p></div><div class="mini"><b>Possession</b><p>Who actually runs the company day to day?</p></div><div class="mini"><b>Control</b><p>Who formally governs the company’s affairs?</p></div></div></div>
+  <div class="plate"><h3 class="plate-title">Ownership. Possession. Control.</h3><div class="support-grid governance-grid"><div class="mini"><b>Ownership</b><p>Who legally owns the company’s equity?</p></div><div class="mini"><b>Possession</b><p>Who actually runs the company day to day?</p></div><div class="mini"><b>Control</b><p>Who formally governs the company’s affairs?</p></div></div></div>
 </section>
 
 <section class="chapter" id="seven">
@@ -217,7 +240,7 @@ const details={
  branding:{rank:'SUBSTANCE',title:'Brand follows substance',glyph:'B',icon:svg.brand,summary:'Brand can reinforce monopoly, but beginning with brand rather than substance is dangerous.',why:'A polished identity cannot compensate for a weak product, weak economics or a weak strategic position.',apply:['Build product substance and defensibility first.','Use brand to reinforce a real advantage rather than manufacture the appearance of one.'],source:'Chapter 5, page 52. '},
  thielLaw:{rank:'FOUNDATIONS',title:'Thiel’s Law',glyph:'03',icon:svg.foundation,summary:'A startup messed up at its foundation cannot be fixed.',why:'Founding choices create path dependence. Misalignment between founders, investors, employees and governance becomes increasingly expensive to unwind.',apply:['Choose co-founders with shared history and trust where possible.','Set ownership, governance and incentives deliberately at the beginning.','Treat foundational misalignment as a structural issue, not a future cleanup task.'],source:'Chapter 9, pages 105-113.  highlight and supporting governance notes.'},
  team:{rank:'FOUNDATIONS',title:'Founders need a team and a prehistory',glyph:'F',icon:svg.people,summary:'It is very hard to go from 0 to 1 without a team, and Thiel argues that founders should ideally share a prehistory before starting together.',why:'Founders will face high-stakes decisions under uncertainty; existing trust and working knowledge reduce the risk of discovering incompatibility too late.',apply:['Evaluate how the founding team has handled conflict and pressure before.','Do not treat co-founder selection as a random match of complementary resumes.'],source:'Chapter 9, page 107.'},
- aligned:{rank:'ALIGNMENT',title:'Structure keeps good people aligned',glyph:'A',icon:svg.people,summary:'Good people who get along are not enough. A company also needs a structure that keeps everyone aligned for the long term.',why:'Ownership, day-to-day possession and formal control can pull in different directions.',apply:['Clarify who owns, who operates and who governs.','Use equity and full-time commitment to strengthen long-term alignment.','Keep the board small enough to communicate and act effectively.'],source:'Chapter 9, pages 108-113. '},
+ aligned:{rank:'ALIGNMENT',title:'Structure keeps good people aligned',glyph:'A',icon:'<svg viewBox="0 0 64 64" aria-hidden="true" focusable="false" stroke-width="2.3" stroke-linecap="round" stroke-linejoin="round"><rect x="25" y="7" width="14" height="12" rx="2" fill="#f08066" stroke="#102f40"/><rect x="7" y="43" width="14" height="12" rx="2" fill="#bea5ff" stroke="#102f40"/><rect x="25" y="43" width="14" height="12" rx="2" fill="#50a99f" stroke="#102f40"/><rect x="43" y="43" width="14" height="12" rx="2" fill="#f4ead8" stroke="#102f40"/><path d="M32 19v12M14 31h36M14 31v12m18-12v12m18-12v12" fill="none" stroke="#102f40"/></svg>',summary:'Good people who get along are not enough. A company also needs a structure that keeps everyone aligned for the long term.',why:'Ownership, day-to-day possession and formal control can pull in different directions.',apply:['Clarify who owns, who operates and who governs.','Use equity and full-time commitment to strengthen long-term alignment.','Keep the board small enough to communicate and act effectively.'],source:'Chapter 9, pages 108-113. '},
  engineering:{rank:'QUESTION 1',title:'Engineering',glyph:'1',icon:svg.tech,summary:'Can you create breakthrough technology instead of incremental improvements?',why:'The question tests whether the product is truly a zero-to-one advance rather than another small optimization.',apply:['Name the breakthrough clearly.','Compare it with the closest substitute.','Look for a 10x improvement in an important dimension.'],source:'Chapter 13, page 149.'},
  timing:{rank:'QUESTION 2',title:'Timing',glyph:'2',icon:svg.future,summary:'Is now the right time to start your particular business?',why:'A good idea can still fail when the enabling technology, market or adoption conditions are not ready.',apply:['Identify what has changed that makes now different from five years ago.','Separate real enabling conditions from enthusiasm.'],source:'Chapter 13, page 149.'},
  monopolyQ:{rank:'QUESTION 3',title:'Monopoly',glyph:'3',icon:svg.shield,summary:'Are you starting with a big share of a small market?',why:'A narrow market gives the company a realistic path to dominance before expansion.',apply:['Define the starting market narrowly and honestly.','Avoid exaggerating uniqueness by inventing an artificially tiny category.'],source:'Chapter 13, pages 149 and 154.'},
