@@ -189,6 +189,25 @@ main{padding:46px 0 95px}.chapter{scroll-margin-top:78px;margin:0 0 72px}.kicker
   .framework-quote{padding:22px 18px;margin-top:14px}
   .framework-quote blockquote{font-size:22px;line-height:1.12;margin-bottom:10px}
 }
+.inversion-plate{padding:18px}
+.inversion-pairs{display:grid;gap:8px;margin-top:14px}
+.inversion-head{display:grid;grid-template-columns:1fr 42px 1fr;gap:9px;padding:0 39px 2px;font-size:8px;font-weight:800;letter-spacing:.13em;color:#6d7c84}
+.inversion-head span:last-child{color:#0a83b1}
+.inversion-pair{display:grid;grid-template-columns:30px minmax(0,1fr) 34px minmax(0,1fr);gap:9px;align-items:stretch}
+.inversion-pair>i{align-self:center;display:grid;place-items:center;width:26px;height:26px;border-radius:50%;background:#15384a;color:#fff;font-style:normal;font-size:8px;font-weight:800}
+.lesson{display:flex;align-items:center;min-height:58px;padding:10px 12px;border-radius:11px;font-size:11px;line-height:1.25}
+.old-lesson{background:#f1f2f2;border:1px solid #d7dcdf;color:#566973}
+.new-lesson{background:#dff5fc;border:1px solid #a9dce9;color:#15384a;font-weight:700}
+.pair-arrow{display:grid;place-items:center;color:#0a8ebf;font-size:22px;font-weight:800}
+@media(max-width:620px){
+  .inversion-plate{padding:12px}
+  .inversion-pairs{gap:7px;margin-top:10px}
+  .inversion-head{grid-template-columns:1fr 24px 1fr;gap:6px;padding:0 0 1px 31px;font-size:6.7px;letter-spacing:.11em}
+  .inversion-pair{grid-template-columns:25px minmax(0,1fr) 22px minmax(0,1fr);gap:6px}
+  .inversion-pair>i{width:23px;height:23px;font-size:7.5px}
+  .lesson{min-height:62px;padding:8px 9px;font-size:9.5px;line-height:1.18;border-radius:9px}
+  .pair-arrow{font-size:17px}
+}
 @media(prefers-reduced-motion:reduce){*{scroll-behavior:auto!important}.tile{transition:none}}
 </style>
 </head>
@@ -246,11 +265,15 @@ main{padding:46px 0 95px}.chapter{scroll-margin-top:78px;margin:0 0 72px}.kicker
   <div class="kicker">02 · Think independently</div><h2>Think from first principles. Think for yourself.</h2>
   <p class="lede">Thiel’s strongest pattern is not a tactic. It is a way of thinking: question formulas, challenge inherited assumptions and make a concrete plan for a future that has not been built yet.</p>
   <div class="core-grid" id="think-grid"></div>
-  <div class="plate"><h3 class="plate-title">The post-dot-com inversion</h3><p class="tile-hint">The conventional lessons Thiel says entrepreneurs absorbed, and the opposite principles he argues are more correct.</p><div class="inversion">
-    <div class="side old"><h3>Conventional lesson</h3><div class="compare-row"><b>1</b><span>Make incremental advances.</span></div><div class="compare-row"><b>2</b><span>Stay lean and flexible, meaning unplanned.</span></div><div class="compare-row"><b>3</b><span>Improve on the competition.</span></div><div class="compare-row"><b>4</b><span>Focus on product, not sales.</span></div></div>
-    <div class="flip">→</div>
-    <div class="side new"><h3>Thiel’s inversion</h3><div class="compare-row"><b>1</b><span>Risk boldness rather than triviality.</span></div><div class="compare-row"><b>2</b><span>A bad plan is better than no plan.</span></div><div class="compare-row"><b>3</b><span>Competitive markets destroy profits.</span></div><div class="compare-row"><b>4</b><span>Sales matters just as much as product.</span></div></div>
-  </div></div>
+  <div class="plate inversion-plate"><h3 class="plate-title">The post-dot-com inversion</h3><p class="tile-hint">The conventional lessons Thiel says entrepreneurs absorbed, and the opposite principles he argues are more correct.</p>
+    <div class="inversion-pairs">
+      <div class="inversion-head"><span>CONVENTIONAL LESSON</span><span></span><span>THIEL’S INVERSION</span></div>
+      <div class="inversion-pair"><i>01</i><div class="lesson old-lesson">Make incremental advances.</div><div class="pair-arrow">→</div><div class="lesson new-lesson">Risk boldness rather than triviality.</div></div>
+      <div class="inversion-pair"><i>02</i><div class="lesson old-lesson">Stay lean and flexible, meaning unplanned.</div><div class="pair-arrow">→</div><div class="lesson new-lesson">A bad plan is better than no plan.</div></div>
+      <div class="inversion-pair"><i>03</i><div class="lesson old-lesson">Improve on the competition.</div><div class="pair-arrow">→</div><div class="lesson new-lesson">Competitive markets destroy profits.</div></div>
+      <div class="inversion-pair"><i>04</i><div class="lesson old-lesson">Focus on product, not sales.</div><div class="pair-arrow">→</div><div class="lesson new-lesson">Sales matters just as much as product.</div></div>
+    </div>
+  </div>
 </section>
 
 <section class="chapter" id="monopoly">
