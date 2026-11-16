@@ -38,6 +38,19 @@
       ],
       "description": "A visual field guide to first-principles thinking, monopoly, power laws, distribution and building a different future.",
       "cover": "https://images.penguinrandomhouse.com/cover/9780804139298"
+    },
+    {
+      "slug": "crucial-conversations",
+      "source": "crucial-conversations/index.html",
+      "title": "Crucial Conversations",
+      "author": "Kerry Patterson, Joseph Grenny, Ron McMillan and Al Switzler",
+      "topics": [
+        "Communication",
+        "Leadership",
+        "Relationships"
+      ],
+      "description": "An interactive field guide to high-stakes dialogue, shared meaning, safety and action.",
+      "cover": "https://images.penguinrandomhouse.com/cover/9781260474183"
     }
   ]
 }
