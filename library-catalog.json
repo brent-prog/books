@@ -51,6 +51,19 @@
       ],
       "description": "An interactive field guide to high-stakes dialogue, shared meaning, safety and action.",
       "cover": "https://images.penguinrandomhouse.com/cover/9781260474183"
+    },
+    {
+      "slug": "the-idiot",
+      "source": "the-idiot/index.html",
+      "title": "The Idiot",
+      "author": "Fyodor Dostoyevsky",
+      "topics": [
+        "Human Nature",
+        "Literature",
+        "Leadership"
+      ],
+      "description": "An interactive exploration of compassion, judgment, identity, freedom and the enduring complexity of human nature.",
+      "cover": "https://covers.openlibrary.org/b/isbn/9780140447927-L.jpg"
     }
   ]
 }
