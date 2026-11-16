@@ -120,24 +120,16 @@ main{padding:46px 0 95px}.chapter{scroll-margin-top:78px;margin:0 0 72px}.kicker
     grid-template-columns:1fr!important;
     gap:7px!important;
   }
-  .governance-grid .mini{
-    min-height:64px;
-    padding:7px 10px;
-    display:grid;
-    grid-template-columns:40px minmax(0,1fr);
-    align-items:center;
-    column-gap:10px;
+  .governance-grid .tile{
+    height:64px!important;
+    min-height:64px!important;
+    max-height:64px!important;
+    padding:7px 24px 7px 8px!important;
+    grid-template-columns:40px minmax(0,1fr)!important;
+    column-gap:10px!important;
   }
-  .governance-grid .mini-icon{width:40px;height:40px}
-  .governance-grid .mini b{
-    margin:0 0 2px;
-    font-size:11px;
-  }
-  .governance-grid .mini p{
-    margin:0;
-    font-size:10.3px;
-    line-height:1.22;
-  }
+  .governance-grid .tile .icon{width:40px!important;height:40px!important}
+  .governance-grid .tile h3{font-size:13px!important;line-height:1.03!important}
 }
 @media(max-width:620px){
   .power-law-card{gap:12px;padding:12px}
@@ -345,7 +337,7 @@ main{padding:46px 0 95px}.chapter{scroll-margin-top:78px;margin:0 0 72px}.kicker
   <div class="kicker">04 · Foundations</div><h2>A startup messed up at its foundation cannot be fixed.</h2>
   <p class="lede">Thiel’s Law makes the founding conditions unusually important. The people, ownership structure, governance and incentives established early shape whether the company can stay aligned for the long term.</p>
   <div class="core-grid" id="foundation-grid"></div>
-  <div class="plate"><h3 class="plate-title">Ownership. Possession. Control.</h3><div class="support-grid governance-grid"><div class="mini governance-tile"><span class="mini-icon"><svg viewBox="0 0 64 64" aria-hidden="true"><rect x="10" y="18" width="44" height="28" rx="6" fill="#bea5ff" stroke="#102f40" stroke-width="3"/><circle cx="32" cy="32" r="8" fill="#fff8e8" stroke="#102f40" stroke-width="3"/><path d="M32 24v16" stroke="#f08066" stroke-width="3" stroke-linecap="round"/></svg></span><div><b>Ownership</b><p>Who legally owns the company’s equity?</p></div></div><div class="mini governance-tile"><span class="mini-icon"><svg viewBox="0 0 64 64" aria-hidden="true"><circle cx="22" cy="24" r="9" fill="#50a99f" stroke="#102f40" stroke-width="3"/><circle cx="42" cy="24" r="9" fill="#bea5ff" stroke="#102f40" stroke-width="3"/><path d="M13 48c3-9 9-14 19-14s16 5 19 14" fill="#f4ead8" stroke="#102f40" stroke-width="3"/><path d="M32 34v14" stroke="#102f40" stroke-width="3"/></svg></span><div><b>Possession</b><p>Who actually runs the company day to day?</p></div></div><div class="mini governance-tile"><span class="mini-icon"><svg viewBox="0 0 64 64" aria-hidden="true"><rect x="24" y="8" width="16" height="12" rx="2" fill="#f08066" stroke="#102f40" stroke-width="3"/><rect x="8" y="42" width="14" height="12" rx="2" fill="#bea5ff" stroke="#102f40" stroke-width="3"/><rect x="25" y="42" width="14" height="12" rx="2" fill="#50a99f" stroke="#102f40" stroke-width="3"/><rect x="42" y="42" width="14" height="12" rx="2" fill="#f4ead8" stroke="#102f40" stroke-width="3"/><path d="M32 20v12M15 32h34M15 32v10m17-10v10m17-10v10" fill="none" stroke="#102f40" stroke-width="3"/></svg></span><div><b>Control</b><p>Who formally governs the company’s affairs?</p></div></div></div></div>
+  <div class="plate"><h3 class="plate-title">Ownership. Possession. Control.</h3><p class="tile-hint">Three different forms of power can exist inside the same company. Tap each to explore the distinction.</p><div class="support-grid governance-grid" id="governance-grid"></div></div>
 </section>
 
 <section class="chapter" id="seven">
@@ -436,6 +428,9 @@ const details={
  thielLaw:{rank:'FOUNDATIONS',title:'Thiel’s Law',glyph:'03',icon:svg.foundation,summary:'A startup messed up at its foundation cannot be fixed.',why:'Founding choices create path dependence. Misalignment between founders, investors, employees and governance becomes increasingly expensive to unwind.',apply:['Choose co-founders with shared history and trust where possible.','Set ownership, governance and incentives deliberately at the beginning.','Treat foundational misalignment as a structural issue, not a future cleanup task.'],source:'Chapter 9, pages 105-113.  highlight and supporting governance notes.'},
  team:{rank:'FOUNDATIONS',title:'Founders need a team and a prehistory',glyph:'F',icon:svg.people,summary:'It is very hard to go from 0 to 1 without a team, and Thiel argues that founders should ideally share a prehistory before starting together.',why:'Founders will face high-stakes decisions under uncertainty; existing trust and working knowledge reduce the risk of discovering incompatibility too late.',apply:['Evaluate how the founding team has handled conflict and pressure before.','Do not treat co-founder selection as a random match of complementary resumes.'],source:'Chapter 9, page 107.'},
  aligned:{rank:'ALIGNMENT',title:'Structure keeps good people aligned',glyph:'A',icon:'<svg viewBox="0 0 64 64" aria-hidden="true" focusable="false" stroke-width="2.3" stroke-linecap="round" stroke-linejoin="round"><rect x="25" y="7" width="14" height="12" rx="2" fill="#f08066" stroke="#102f40"/><rect x="7" y="43" width="14" height="12" rx="2" fill="#bea5ff" stroke="#102f40"/><rect x="25" y="43" width="14" height="12" rx="2" fill="#50a99f" stroke="#102f40"/><rect x="43" y="43" width="14" height="12" rx="2" fill="#f4ead8" stroke="#102f40"/><path d="M32 19v12M14 31h36M14 31v12m18-12v12m18-12v12" fill="none" stroke="#102f40"/></svg>',summary:'Good people who get along are not enough. A company also needs a structure that keeps everyone aligned for the long term.',why:'Ownership, day-to-day possession and formal control can pull in different directions.',apply:['Clarify who owns, who operates and who governs.','Use equity and full-time commitment to strengthen long-term alignment.','Keep the board small enough to communicate and act effectively.'],source:'Chapter 9, pages 108-113. '},
+ ownership:{rank:'FOUNDATIONS',title:'Ownership',glyph:'O',icon:'<svg viewBox="0 0 64 64" aria-hidden="true"><rect x="10" y="18" width="44" height="28" rx="6" fill="#bea5ff" stroke="#102f40" stroke-width="3"/><circle cx="32" cy="32" r="8" fill="#fff8e8" stroke="#102f40" stroke-width="3"/><path d="M32 24v16" stroke="#f08066" stroke-width="3" stroke-linecap="round"/></svg>',summary:'Ownership asks who legally owns the company’s equity.',why:'Ownership gives people an economic stake in the company, but it does not necessarily mean they run the business day to day or formally govern it.',apply:['Make the equity structure explicit.','Understand whose economic interests are represented by ownership.','Do not confuse ownership with operating authority or board control.'],source:'Chapter 9, pages 108-113. Ownership, possession and control.'},
+ possession:{rank:'FOUNDATIONS',title:'Possession',glyph:'P',icon:'<svg viewBox="0 0 64 64" aria-hidden="true"><circle cx="22" cy="24" r="9" fill="#50a99f" stroke="#102f40" stroke-width="3"/><circle cx="42" cy="24" r="9" fill="#bea5ff" stroke="#102f40" stroke-width="3"/><path d="M13 48c3-9 9-14 19-14s16 5 19 14" fill="#f4ead8" stroke="#102f40" stroke-width="3"/><path d="M32 34v14" stroke="#102f40" stroke-width="3"/></svg>',summary:'Possession asks who actually runs the company day to day.',why:'Operating authority can sit with people who do not own most of the equity and do not have final formal control. That distinction matters because daily decisions shape the company continuously.',apply:['Clarify who has operating authority.','Make day-to-day decision rights explicit.','Check that the people running the company are aligned with owners and formal governance.'],source:'Chapter 9, pages 108-113. Ownership, possession and control.'},
+ control:{rank:'FOUNDATIONS',title:'Control',glyph:'C',icon:'<svg viewBox="0 0 64 64" aria-hidden="true"><rect x="24" y="8" width="16" height="12" rx="2" fill="#f08066" stroke="#102f40" stroke-width="3"/><rect x="8" y="42" width="14" height="12" rx="2" fill="#bea5ff" stroke="#102f40" stroke-width="3"/><rect x="25" y="42" width="14" height="12" rx="2" fill="#50a99f" stroke="#102f40" stroke-width="3"/><rect x="42" y="42" width="14" height="12" rx="2" fill="#f4ead8" stroke="#102f40" stroke-width="3"/><path d="M32 20v12M15 32h34M15 32v10m17-10v10m17-10v10" fill="none" stroke="#102f40" stroke-width="3"/></svg>',summary:'Control asks who formally governs the company’s affairs.',why:'Formal control sits with the governance structure, especially the board. It can diverge from both ownership and day-to-day possession, creating tension when the three are not aligned.',apply:['Make formal governance authority explicit.','Keep the board small enough to communicate and act effectively.','Check that control, ownership and operating authority reinforce rather than undermine one another.'],source:'Chapter 9, pages 108-113. Ownership, possession and control.'},
  engineering:{rank:'QUESTION 1',title:'Engineering',glyph:'1',icon:svg.tech,summary:'Can you create breakthrough technology instead of incremental improvements?',why:'The question tests whether the product is truly a zero-to-one advance rather than another small optimization.',apply:['Name the breakthrough clearly.','Compare it with the closest substitute.','Look for a 10x improvement in an important dimension.'],source:'Chapter 13, page 149.'},
  timing:{rank:'QUESTION 2',title:'Timing',glyph:'2',icon:svg.future,summary:'Is now the right time to start your particular business?',why:'A good idea can still fail when the enabling technology, market or adoption conditions are not ready.',apply:['Identify what has changed that makes now different from five years ago.','Separate real enabling conditions from enthusiasm.'],source:'Chapter 13, page 149.'},
  monopolyQ:{rank:'QUESTION 3',title:'Monopoly',glyph:'3',icon:svg.monopoly,summary:'Are you starting with a big share of a small market?',why:'A narrow market gives the company a realistic path to dominance before expansion.',apply:['Define the starting market narrowly and honestly.','Avoid exaggerating uniqueness by inventing an artificially tiny category.'],source:'Chapter 13, pages 149 and 154.'},
@@ -463,6 +458,7 @@ $('think-grid').innerHTML=['first','future','contrarian','plan'].map((k,i)=>crea
 $('moat-grid').innerHTML=['proprietary','network','scale','branding'].map((k,i)=>createTile(k,['#08a7df','#279c85','#08a7df','#ad7e42'][i])).join('');
 $('monopoly-grid').innerHTML=['unique','tenx','small','last'].map((k,i)=>createTile(k,['#e46f48','#08a7df','#279c85','#ad7e42'][i])).join('');
 $('foundation-grid').innerHTML=['thielLaw','team','aligned'].map((k,i)=>createTile(k,['#e46f48','#08a7df','#279c85'][i])).join('');
+$('governance-grid').innerHTML=['ownership','possession','control'].map((k,i)=>createTile(k,['#08a7df','#279c85','#e46f48'][i])).join('');
 $('seven-grid').innerHTML=['engineering','timing','monopolyQ','peopleQ','distributionQ','durabilityQ','secretQ'].map((k,i)=>createTile(k,['#08a7df','#279c85','#e46f48','#ad7e42','#08a7df','#279c85','#e46f48'][i],'question')).join('');
 
 $('distribution-grid').innerHTML=['salesBad','oneChannel','sellCompany','clv'].map((k,i)=>createTile(k,['#e46f48','#08a7df','#279c85','#ad7e42'][i])).join('');
