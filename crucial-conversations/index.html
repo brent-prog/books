@@ -288,9 +288,27 @@ button.foundation-diagram{width:100%;display:block;min-width:0;padding:12px 24px
 .book-purchase .purchase-link:focus-visible{outline:3px solid #c84b55;outline-offset:3px}
 .book-purchase .affiliate-disclosure{font-size:11px;color:#67716e;margin:15px 0 0}
 @media(max-width:480px){.book-purchase{padding:36px 15px}.book-purchase .purchase-link{width:100%;max-width:310px}}
+
+/* Mobile book-navigation audit: give branding its own line and make additional sections discoverable. */
+.nav-more{display:none}
+@media(max-width:700px){
+ .stick .wrap{display:grid;grid-template-columns:74px minmax(0,1fr) 38px;grid-template-rows:39px 43px;align-items:center;column-gap:0;row-gap:2px;min-height:0;width:calc(100% - 24px);margin:auto;padding:5px 0}
+ .stick .brand{grid-column:1;grid-row:1;justify-self:start;min-width:0}
+ .stick .brand img{width:70px;max-width:100%;height:auto}
+ .stick .book{grid-column:2/4;grid-row:1;min-width:0;border-right:none;padding:0 0 0 12px;font-size:10px;line-height:1.14;letter-spacing:.015em}
+ .stick .book span:first-child{white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+ .stick .navscroll{grid-column:1/3;grid-row:2;width:100%;min-width:0;align-self:stretch;flex:none;gap:3px;mask-image:linear-gradient(90deg,#000 0%,#000 90%,transparent 100%);-webkit-mask-image:linear-gradient(90deg,#000 0%,#000 90%,transparent 100%);overscroll-behavior-x:contain;scroll-snap-type:x proximity}
+ .stick .navscroll a{display:inline-flex;align-items:center;flex:none;padding:0 13px;min-height:40px;font-size:11px;scroll-snap-align:start}
+ .stick .nav-more{display:grid;grid-column:3;grid-row:2;width:36px;height:39px;margin-left:2px;place-items:center;align-self:center;cursor:pointer;border:1px solid #c7bfb3;border-radius:5px;background:#fffaf2;color:#a93743;box-shadow:0 2px 5px #2020201a}
+ .stick .nav-more svg{width:21px;height:21px;transition:transform .15s}
+ .stick .nav-more[data-direction="back"] svg{transform:rotate(180deg)}
+ .stick .nav-more[hidden]{display:none}
+ .chapter{scroll-margin-top:100px}
+ html{scroll-padding-top:100px}
+}
 </style></head><body>
 <header class="hero"><div class="wrap"><div class="hero-bar"><a href="/library/" class="label">← KEEP BUSINESS SIMPLE / LIBRARY</a><span class="label">AN INTERACTIVE SUMMARY</span></div><div class="hero-grid"><div class="hero-copy"><h1><span>CRUCIAL</span><span>CONVERSATIONS</span></h1><p class="hero-line">TOOLS FOR TALKING WHEN STAKES ARE HIGH</p><p class="hero-authors">KERRY PATTERSON · JOSEPH GRENNY · RON MCMILLAN · AL SWITZLER</p><a href="#meaning" class="hero-action">EXPLORE THE IDEAS <span>↓</span></a></div><div class="hero-art hero-mark"><svg class="hero-bubblemark" viewBox="0 0 520 410" role="img" aria-label="Two overlapping conversation bubbles, the signature symbol for Crucial Conversations"><defs><linearGradient id="redMark" x1="0" x2="1" y1="0" y2="1"><stop stop-color="#fb4959"/><stop offset="1" stop-color="#b72237"/></linearGradient></defs><g fill="none" stroke="url(#redMark)" stroke-width="27" stroke-linejoin="round" stroke-linecap="round"><path d="M44 136Q44 111 69 111H282Q307 111 307 136V278H169L106 340V278H69Q44 278 44 253Z"/><path d="M167 111V68Q167 39 196 39H420Q449 39 449 68V240H390V314L319 240"/></g><path d="M87 195h123M87 225h84" stroke="#f5d6d6" stroke-width="10" stroke-linecap="round" opacity=".9"/><path d="M359 110h49m-49 29h49" stroke="#f5d6d6" stroke-width="10" stroke-linecap="round" opacity=".9"/></svg></div></div></div></header>
-<nav class="stick" aria-label="Book section navigation"><div class="wrap"><a href="/library/" class="brand" aria-label="Return to KBS Library"><img src="https://keepbusinesssimple.com/assets/kbs-official-lockup-black.svg" alt="Keep Business Simple"></a><div class="book"><span>CRUCIAL CONVERSATIONS:</span><span>A SUMMARY</span></div><div class="navscroll"><a href="#meaning">Meaning</a><a href="#heart">Heart</a><a href="#safety">Safety</a><a href="#crib">C.R.I.B.</a><a href="#stories">Stories</a><a href="#state">S.T.A.T.E.</a><a href="#listen">Listening</a><a href="#action">Action</a></div></div></nav>
+<nav class="stick" aria-label="Book section navigation"><div class="wrap"><a href="/library/" class="brand" aria-label="Return to KBS Library"><img src="https://keepbusinesssimple.com/assets/kbs-official-lockup-black.svg" alt="Keep Business Simple"></a><div class="book"><span>CRUCIAL CONVERSATIONS:</span><span>A SUMMARY</span></div><div class="navscroll"><a href="#meaning">Meaning</a><a href="#heart">Heart</a><a href="#safety">Safety</a><a href="#crib">C.R.I.B.</a><a href="#stories">Stories</a><a href="#state">S.T.A.T.E.</a><a href="#listen">Listening</a><a href="#action">Action</a></div><button class="nav-more" type="button" aria-label="Show more sections" title="More sections"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m9 5 7 7-7 7"/></svg></button></div></nav>
 <main>
 <section id="meaning" class="chapter white"><div class="wrap">
 <div class="chapterheader"><span class="chapter-no">01</span><div><span class="eyebrow">THE FOUNDATION</span><h2>Crucial Conversations.</h2><p>Crucial Conversations can transform people and relationships. The Buddhist “middle way” is a higher middle way versus a compromise. The root cause of many human problems lies in how people behave when others disagree about high-stakes, emotional issues.</p></div></div>
@@ -450,4 +468,27 @@ function installIcons(){
 }
 installIcons();
 
+
+/* Book section navigation: visible tap target for overflow and swipeable links. */
+(function(){
+ const track=document.querySelector('.stick .navscroll');
+ const more=document.querySelector('.stick .nav-more');
+ if(!track||!more)return;
+ function refresh(){
+   const overflow=track.scrollWidth-track.clientWidth;
+   more.hidden=window.innerWidth>700||overflow<4;
+   const atEnd=track.scrollLeft>=overflow-4;
+   more.dataset.direction=atEnd?'back':'forward';
+   more.setAttribute('aria-label',atEnd?'Show previous sections':'Show more sections');
+   more.title=atEnd?'Previous sections':'More sections';
+ }
+ more.addEventListener('click',()=>{
+   const step=Math.max(160,Math.round(track.clientWidth*.8));
+   track.scrollBy({left:more.dataset.direction==='back'?-step:step,behavior:'smooth'});
+ });
+ track.addEventListener('scroll',refresh,{passive:true});
+ window.addEventListener('resize',refresh,{passive:true});
+ window.addEventListener('load',refresh,{once:true});
+ refresh();
+})();
 </script></body></html>
