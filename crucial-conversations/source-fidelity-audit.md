@@ -1,3 +1,17 @@
+## Section 1 review — 17 November 2026
+
+Following direct feedback on Section 1, the preview was revised without changing the production page. The hero's invented tagline was replaced with the book's actual subtitle, **Tools for Talking When Stakes Are High**. The hero now uses a refined overlapping conversation-bubble symbol; the earlier Shared Meaning image was removed from the hero.
+
+The first chapter heading now uses **The Foundation** only, and the opening does not refer to the user's sketch or writing process. The Middle Way figure has been rebuilt as the *original three-condition triangle* (opposing opinions, strong emotions, high stakes around Crucial Conversations), not a two-position compromise diagram or the assistant's “Not halfway. Higher.” interpretation.
+
+**Avoid Them / Face Them Poorly / Face Them Well** now form three compact choices instead of oversized cards. The monkey-brain reason for handling them poorly has been integrated into **Face Them Poorly**. The Law, Silence Fails and Fool's Choice are represented as compact explanatory panels; the simplistic prior icons were removed. Silence Fails uses a worst → good → best accountability comparison.
+
+The Pool of Shared Meaning now has a large, dedicated diagram *inside Section 1* showing information, facts, experiences and perspectives being contributed. **Involvement = Increased Commitment** is attached directly beneath that visual. Silence and Violence are positioned as behaviours that hinder contribution, not as equivalent competing categories with Dialogue.
+
+This is a source-fidelity and functional correction, not approval of the new artwork. The user has not approved the revised iconography or illustration aesthetics.
+
+---
+
 # Crucial Conversations — source-fidelity audit
 
 **Audit basis:** `Crucial Conversations Summary.pdf` (all four illustrated pages), the associated Notion Markdown export and images, and the `crucial-conversations/index.html` replacement on branch `design/crucial-conversations-editorial-rebuild`.
