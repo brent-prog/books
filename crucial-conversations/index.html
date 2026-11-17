@@ -289,9 +289,9 @@ button.foundation-diagram{width:100%;display:block;min-width:0;padding:12px 24px
 .book-purchase .affiliate-disclosure{font-size:11px;color:#67716e;margin:15px 0 0}
 @media(max-width:480px){.book-purchase{padding:36px 15px}.book-purchase .purchase-link{width:100%;max-width:310px}}
 
-/* Mobile book-navigation audit: give branding its own line and make additional sections discoverable. */
+/* Mobile and narrow-tablet book navigation: separate branding and reveal overflow. */
 .nav-more{display:none}
-@media(max-width:700px){
+@media(max-width:900px){
  .stick .wrap{display:grid;grid-template-columns:74px minmax(0,1fr) 38px;grid-template-rows:39px 43px;align-items:center;column-gap:0;row-gap:2px;min-height:0;width:calc(100% - 24px);margin:auto;padding:5px 0}
  .stick .brand{grid-column:1;grid-row:1;justify-self:start;min-width:0}
  .stick .brand img{width:70px;max-width:100%;height:auto}
@@ -476,7 +476,7 @@ installIcons();
  if(!track||!more)return;
  function refresh(){
    const overflow=track.scrollWidth-track.clientWidth;
-   more.hidden=window.innerWidth>700||overflow<4;
+   more.hidden=window.innerWidth>900||overflow<4;
    const atEnd=track.scrollLeft>=overflow-4;
    more.dataset.direction=atEnd?'back':'forward';
    more.setAttribute('aria-label',atEnd?'Show previous sections':'Show more sections');
