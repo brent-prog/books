@@ -254,7 +254,24 @@ button.foundation-diagram{width:100%;display:block;min-width:0;padding:12px 24px
   .heart-questions button.card-action::after,
   .and-diagram button.card-action::after{right:9px;top:9px;font-size:16px}
 }
-.stories-path-divider{height:1px;background:#d9d2c9;margin:36px 0 32px}#stories .fix-story{margin-top:32px}@media(max-width:650px){.stories-path-divider{margin:26px 0}}</style></head><body>
+.stories-path-divider{height:1px;background:#d9d2c9;margin:36px 0 32px}#stories .fix-story{margin-top:32px}@media(max-width:650px){.stories-path-divider{margin:26px 0}}
+/* AMPP and ABC: subtle full-card pop-out indicators, aligned with Start with Heart. */
+.ampp button,.abc button{position:relative;padding-right:39px}
+.ampp button::after,.abc button::after{
+ content:"↗";position:absolute;top:11px;right:14px;
+ color:#f1a3a7;font:700 18px/1 "DM Sans",Arial,sans-serif;
+ opacity:.85;pointer-events:none;
+}
+.abc button::after{color:#477f70}
+.ampp button:hover::after,.ampp button:focus-visible::after,
+.abc button:hover::after,.abc button:focus-visible::after{
+ opacity:1;transform:translate(2px,-2px);
+}
+@media(max-width:480px){
+ .ampp button,.abc button{padding-right:32px}
+ .ampp button::after,.abc button::after{right:9px;top:9px;font-size:16px}
+}
+</style></head><body>
 <header class="hero"><div class="wrap"><div class="hero-bar"><a href="/library/" class="label">← KEEP BUSINESS SIMPLE / LIBRARY</a><span class="label">AN INTERACTIVE SUMMARY</span></div><div class="hero-grid"><div class="hero-copy"><h1><span>CRUCIAL</span><span>CONVERSATIONS</span></h1><p class="hero-line">TOOLS FOR TALKING WHEN STAKES ARE HIGH</p><p class="hero-authors">KERRY PATTERSON · JOSEPH GRENNY · RON MCMILLAN · AL SWITZLER</p><a href="#meaning" class="hero-action">EXPLORE THE IDEAS <span>↓</span></a></div><div class="hero-art hero-mark"><svg class="hero-bubblemark" viewBox="0 0 520 410" role="img" aria-label="Two overlapping conversation bubbles, the signature symbol for Crucial Conversations"><defs><linearGradient id="redMark" x1="0" x2="1" y1="0" y2="1"><stop stop-color="#fb4959"/><stop offset="1" stop-color="#b72237"/></linearGradient></defs><g fill="none" stroke="url(#redMark)" stroke-width="27" stroke-linejoin="round" stroke-linecap="round"><path d="M44 136Q44 111 69 111H282Q307 111 307 136V278H169L106 340V278H69Q44 278 44 253Z"/><path d="M167 111V68Q167 39 196 39H420Q449 39 449 68V240H390V314L319 240"/></g><path d="M87 195h123M87 225h84" stroke="#f5d6d6" stroke-width="10" stroke-linecap="round" opacity=".9"/><path d="M359 110h49m-49 29h49" stroke="#f5d6d6" stroke-width="10" stroke-linecap="round" opacity=".9"/></svg></div></div></div></header>
 <nav class="stick" aria-label="Book section navigation"><div class="wrap"><a href="/library/" class="brand" aria-label="Return to KBS Library"><img src="https://keepbusinesssimple.com/assets/kbs-official-lockup-black.svg" alt="Keep Business Simple"></a><div class="book"><span>CRUCIAL CONVERSATIONS:</span><span>A SUMMARY</span></div><div class="navscroll"><a href="#meaning">Meaning</a><a href="#heart">Heart</a><a href="#safety">Safety</a><a href="#crib">C.R.I.B.</a><a href="#stories">Stories</a><a href="#state">S.T.A.T.E.</a><a href="#listen">Listening</a><a href="#action">Action</a></div></div></nav>
 <main>
